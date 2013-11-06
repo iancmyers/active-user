@@ -1,0 +1,25 @@
+{
+  "name": "active-user",
+  "version": "0.0.1",
+  "description": "Easily track active users with Redis.",
+  "main": "lib/active-user.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Ian Christian Myers <ian@iancmyers.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "redis": "~0.9.0",
+    "hiredis": "~0.1.15"
+  },
+  "devDependencies": {
+    "redis": "~0.9.0",
+    "hiredis": "~0.1.15",
+    "mocha": "~1.14.0"
+  },
+  "dependencies": {
+    "bigint": "~0.4.2",
+    "moment": "~2.4.0"
+  }
+}
