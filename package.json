@@ -17,6 +17,7 @@
     "bigint": "~0.4.2",
     "moment": "~2.4.0",
     "redis": "~0.9.0",
-    "hiredis": "~0.1.15"
+    "hiredis": "~0.1.15",
+    "underscore": "~1.5.2"
   }
 }
