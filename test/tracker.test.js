@@ -8,9 +8,10 @@ var client, activity;
 
 describe('tracking', function () {
 
-  before(function () {
+  before(function (done) {
     activity = activeUser.createClient();
     client = activity.client;
+    client.flushall(done);
   });
 
   describe('#track', function () {
@@ -54,7 +55,7 @@ describe('tracking', function () {
 
         function (callback) {
           activity.untrack(1);
-          
+
           client.get(util.keyFor(), function (err, buffer) {
             if (err) return callback(err);
             var binaryString = util.toBinaryString(buffer);
