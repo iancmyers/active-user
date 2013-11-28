@@ -39,6 +39,13 @@ describe('reporting', function () {
       });
     });
 
+    it('should report 0 for days with no information', function (done) {
+      activity.daily('nothing', function (err, num) {
+        expect(num).to.be(0);
+        done();
+      });
+    });
+
     it('should report the DAUs for a custom action and specified day');
   });
 
