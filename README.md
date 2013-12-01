@@ -1,6 +1,6 @@
 # Active User
 
-The `active-user` modules allows you to quickly track daily, weekly, and monthly active users in Redis.
+The `active-user` module allows you to quickly track daily, weekly, and monthly active users in Redis.
 
 ## Installing and Getting Started
 
