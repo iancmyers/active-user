@@ -16,7 +16,7 @@ describe('tracking', function () {
 
   describe('#track', function () {
     it('should track with just an id', function (done) {
-      activity.track(1);
+      var test = activity.track(1);
 
       client.get(util.keyFor(), function (err, buffer) {
         if (err) return done(err);

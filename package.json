@@ -1,12 +1,15 @@
 {
   "name": "active-user",
   "version": "0.0.1",
-  "description": "Easily track active users with Redis.",
+  "description": "Easily track daily, weekly, and monthly active users with Redis.",
   "main": "lib/active-user.js",
   "scripts": {
     "test": "node_modules/.bin/mocha test/*.test.js"
   },
-  "repository": "",
+  "repository": { 
+    "type" : "git", 
+    "url" : "https://github.com/iancmyers/active-user.git"
+  },
   "author": "Ian Christian Myers <ian@iancmyers.com>",
   "license": "MIT",
   "devDependencies": {
