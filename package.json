@@ -1,27 +1,44 @@
 {
-  "name": "active-user",
-  "version": "0.0.1",
-  "description": "Easily track daily, weekly, and monthly active users with Redis.",
+  "name": "hau",
+  "version": "0.1.0",
+  "description": "Easily track hourly daily, weekly, and monthly active users with Redis.",
   "main": "lib/active-user.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha test/*.test.js"
+    "test": "mocha test/*.test.js"
   },
-  "repository": { 
-    "type" : "git", 
-    "url" : "https://github.com/iancmyers/active-user.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malcolmocean/hau.git"
   },
-  "author": "Ian Christian Myers <ian@iancmyers.com>",
+  "author": "Malcolm Ocean <malcolm@malcolmocean.com> (http://malcolmocean.com)",
   "license": "MIT",
   "devDependencies": {
     "mocha": "~1.14.0",
     "expect.js": "~0.2.0"
   },
   "dependencies": {
-    "bigint": "~0.4.2",
+    "bignum": "git://github.com/malcolmocean/node-bignum.git#e31bc4b3b0c4bf3b72c53ab3453a5415e12c3849",
     "moment": "~2.4.0",
     "redis": "~0.9.0",
-    "hiredis": "~0.1.15",
     "underscore": "~1.5.2",
     "async": "~0.2.9"
-  }
+  },
+  "contributors": [
+    "Ian Christian Myers <ian@iancmyers.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/malcolmocean/hau/issues"
+  },
+  "homepage": "https://github.com/malcolmocean/hau#readme",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "active-user",
+    "hourly",
+    "hau",
+    "dau",
+    "wau",
+    "mau"
+  ]
 }

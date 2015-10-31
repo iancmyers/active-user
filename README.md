@@ -1,21 +1,25 @@
 # Active User
 
-The `active-user` module allows you to quickly track daily, weekly, and monthly active users in Redis.
+The `hau` module allows you to quickly track hourly, daily, weekly, and monthly active users in Redis.
+
+Hourly? Yeah, [hourly](https://medium.com/@anamitra/the-shape-of-the-curve-5b869a38684a).
+
+This repo was forked from [iancmyers](https://github.com/iancmyers)'s [active-user](https://github.com/iancmyers/active-user) module. My update, in addition to adding hourly support, removes the dependency on `bigint`, now using `bignum`, which I *also* had to modify so that it would support conversion to binary strings. I spent all day on this, and would love props [on twitter](https://twitter.com/Malcolm_Ocean) if you end up using this lib.
 
 ## Installing and Getting Started
 
-You can install the `active-user` module via npm. You will also need to have a [Redis server](http://redis.io) instance running.
+You can install the `hau` module via npm. You will also need to have a [Redis server](http://redis.io) instance running.
 
 ```bash
-npm install active-user
+npm install hau
 ```
 
-Once `active-user` is installed we need a client:
+Once `hau` is installed we need a client:
 
 ```js
-var activeUser = require('active-user');
+var hau = require('hau');
 
-var activity = activeUser.createClient(REDIS_PORT, REDIS_HOST, REDIS_OPTIONS);
+var activity = hau.createClient(REDIS_PORT, REDIS_HOST, REDIS_OPTIONS);
 ```
 
 ## Tracking
