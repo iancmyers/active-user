@@ -1,10 +1,10 @@
-# Active User
+# Hourly Active User
 
 The `hau` module allows you to quickly track hourly, daily, weekly, and monthly active users in Redis.
 
 Hourly? Yeah, [hourly](https://medium.com/@anamitra/the-shape-of-the-curve-5b869a38684a).
 
-This repo was forked from [iancmyers](https://github.com/iancmyers)'s [active-user](https://github.com/iancmyers/active-user) module. My update, in addition to adding hourly support, removes the dependency on `bigint`, now using `bignum`, which I *also* had to modify so that it would support conversion to binary strings. I spent all day on this, and would love props [on twitter](https://twitter.com/Malcolm_Ocean) if you end up using this lib.
+This repo was forked from [iancmyers](https://github.com/iancmyers)'s [active-user](https://github.com/iancmyers/active-user) module. My update, in addition to adding hourly support, removes the dependency on `bigint`, now using `bignum`, which I *also* had to modify so that it would support conversion to binary strings. I spent all day on just that, and would love props [on twitter](https://twitter.com/Malcolm_Ocean) if you end up using this module.
 
 ## Installing and Getting Started
 
