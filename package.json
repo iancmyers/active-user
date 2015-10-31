@@ -1,6 +1,6 @@
 {
   "name": "hau",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Easily track hourly daily, weekly, and monthly active users with Redis.",
   "main": "lib/active-user.js",
   "scripts": {
