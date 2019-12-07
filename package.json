@@ -17,9 +17,8 @@
     "expect.js": "~0.2.0"
   },
   "dependencies": {
-    "bignum": "git://github.com/malcolmocean/node-bignum.git#e31bc4b3b0c4bf3b72c53ab3453a5415e12c3849",
     "moment": "~2.4.0",
-    "redis": "~2.3.0",
+    "redis": "~2.8.0",
     "underscore": "~1.5.2",
     "async": "~0.2.9"
   },
