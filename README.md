@@ -4,7 +4,7 @@ The `hau` module allows you to quickly track hourly, daily, weekly, and monthly 
 
 Hourly? Yeah, [hourly](https://medium.com/@anamitra/the-shape-of-the-curve-5b869a38684a).
 
-This repo was forked from [iancmyers](https://github.com/iancmyers)'s [active-user](https://github.com/iancmyers/active-user) module. My update, in addition to adding hourly support, removes the dependency on `bigint`, now using `bignum`, which I *also* had to modify so that it would support conversion to binary strings. I spent all day on just that, and would love props [on twitter](https://twitter.com/Malcolm_Ocean) if you end up using this module.
+Check out this article to better understand library implementation: https://blog.getspool.com/2011/11/29/fast-easy-realtime-metrics-using-redis-bitmaps/
 
 ## Installing and Getting Started
 
@@ -60,6 +60,16 @@ activity.daily('commented', '2013-11-21', function (err, num) {
 activity.daily(function (err, num) {
   console.log(num);
 });
+
+// Using promises to fetch the number of users who commented on Nov 21, 2013
+const { promisify } = require('util');
+const activityDaily = promisify(activity.daily);
+const daily = await activityDaily('commented', '2013-11-21');
+
+// Using promises to fetch the number of daily active users for the current day
+const { promisify } = require('util');
+const activityDaily = promisify(activity.daily);
+const daily = await activityDaily();
 ```
 
 ###activity.weekly([action], [date], callback);
@@ -89,3 +99,11 @@ activity.monthly(function (err, num) {
   console.log(num);
 });
 ```
+
+## Release History
+* 0.0.1
+    * First release (forked from [iancmyers](https://github.com/iancmyers)'s [active-user](https://github.com/iancmyers/active-user) module)
+* 0.2.0
+    * New updates made by [malcolmocean](https://github.com/malcolmocean)'s adding hourly support, and changing the dependency bigint to bignum
+* 0.3.0
+    * Remove dependency on `bignum`, now using BigInt, which is a native JS object
